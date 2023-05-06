@@ -4,12 +4,12 @@ VueJS excel file import or export tool
 
 ```bash
 # 
-npm install vue-excel-import-export --save
+npm install oncu-vuejs-excel-export-import --save
 # or
-yarn add vue-excel-import-export --save
+yarn add oncu-vuejs-excel-export-import --save
 
 # main.js 
-import comExcel from 'vue-excel-import-export'
+import comExcel from 'oncu-vuejs-excel-export-import'
 
 Vue.install(comExcel)
 

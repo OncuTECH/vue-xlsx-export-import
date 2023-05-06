@@ -534,7 +534,7 @@ export default /*#__PURE__*/{
 
       let newtableList = deepClone(tableList) || [{}]
 
-      let sheetName = `${fileName ? fileName : 'excel文件'}_${new Date().Format('MM月dd日HH时mm分')}`
+      let sheetName = `${fileName ? fileName : 'excel'}`
 
       // excel表头
       let excelHeader = this.buildHeader(headerOptions)
