@@ -597,7 +597,7 @@ var script = {
          * */
         async exportExport(tableList, headerOptions, fileName) {
             let newtableList = deepClone(tableList) || [{}];
-            let sheetName = `${fileName ? fileName : 'excel文件'}_${new Date().Format('MM月dd日HH时mm分')}`; // excel表头
+            let sheetName = `${fileName ? fileName : 'excel'}`; // excel表头
 
             let excelHeader = this.buildHeader(headerOptions); // 头部行数，用来固定表头
 
@@ -609,7 +609,7 @@ var script = {
             let merges = this.doMerges(excelHeader); // 生成sheet
 
             let ws = this.aoa_to_sheet(excelHeader, headerRows);
-            console.log(dataList, excelHeader, merges, ws); // 单元格合并
+            //console.log(dataList, excelHeader, merges, ws); // 单元格合并
 
             ws['!merges'] = merges; // console.log(excelHeader, 'excelHeader');
             // console.log(dataList, 'dataList');
@@ -661,7 +661,7 @@ var script = {
         async exportExportSheets() {
             let sheets = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
             let fileName = arguments.length > 1 ? arguments[1] : undefined;
-            let sheetName = `${fileName ? fileName : 'excel文件'}_${new Date().Format('MM月dd日HH时mm分')}`;
+            let sheetName = `${fileName ? fileName : 'excel'}`;
             let workbook = {
                 SheetNames: [],
                 Sheets: {}
@@ -703,7 +703,7 @@ var script = {
                     };
                 });
                 workbook.Sheets[el.name || sheet] = ws;
-                console.log(dataList, excelHeader, merges, ws);
+                // console.log(dataList, excelHeader, merges, ws);
             }); // excel样式
 
             let wopts = {
