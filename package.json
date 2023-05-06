@@ -1,6 +1,6 @@
 {
   "name": "oncu-vuejs-excel-export-import",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "vuejs excel files import or export package",
   "main": "dist/com-excel-import-export.ssr.js",
   "browser": "dist/com-excel-import-export.esm.js",
