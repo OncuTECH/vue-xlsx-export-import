@@ -25,7 +25,7 @@ this.$excelFile.importToExcel(function (res) {
   console.log(res)
 })
 
-# 导出数据表格
+#
 this.$excelFile.exportExport([
     { value: 'value1', value1: 'value2' ,value3: 'value3'}
   ],
